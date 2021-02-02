@@ -1,7 +1,7 @@
 # Summary
 This script takes an array of computer names and polls each one to find out if it has all of the KB patches installed which are pre-requisites for compatibility with Windows 7 extended security updates (ESUs).  
 
-# Pre-req logic
+# Pre-requsites and logic
 These pre-reqs are documented here:  
 https://techcommunity.microsoft.com/t5/windows-it-pro-blog/how-to-get-extended-security-updates-for-eligible-windows/ba-p/917807  
 
@@ -29,8 +29,10 @@ All output is duplicated in a log file generated (unique-per-run) in the current
     - `.\Validate-Win7ESUCompat.ps1 -Hosts "computername1","computername2"`
 
 # Parameters
+
 ## -Hosts
 An array of strings, representing hostnames
+
 ## -Log
 Optional. Path to log file. Defaults to `.\Validate-Win7ESUCompat_<date-and-time>.log`.
 
@@ -110,5 +112,4 @@ mseng3@ENGRIT-MSENG3 C:\>
     - `Get-CMCollectionMember -CollectionName "UIUC-ENGR-EWS Windows 7" | select Name`
 - The lists can be munged into an array format with your favorite text editor.
 - I'm not entirely sure what remote permissions are sufficient for this script, but localadmin should work.
-
-- By mseng3 
+- By mseng3. See my other projects here: https://github.com/mmseng/code-compendium.
